@@ -21,7 +21,7 @@ function Flow() {
           <div className="Column25">
             <NodeRepository />
           </div>
-          <div className="Column75 Grid">
+          <div className="Column75">
             <DroppableDiv />
           </div>
         </DndProvider>

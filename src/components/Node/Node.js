@@ -52,6 +52,7 @@ function Node({ name }) {
 
   const [{isDragging}, drag] = useDrag(() => ({
     type: "node",
+    item: {name},
     collect: monitor => ({
       isDragging: !!monitor.isDragging(),
     }),
