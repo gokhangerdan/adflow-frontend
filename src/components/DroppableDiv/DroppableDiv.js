@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDrop } from 'react-dnd';
 import Node from '../Node/Node';
+import './DroppableDiv.css';
 
 function DroppableDiv() {
   const [items, setItems] = useState([]);
@@ -20,12 +21,10 @@ function DroppableDiv() {
 
   return (
     <div
+      className="DropArea"
       ref={drop}
       style={{
-        height: '100vh',
-        backgroundColor: isOver ? 'gray' : 'white',
-        backgroundImage: 'linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px)',
-        backgroundSize: '30px 30px'
+        backgroundColor: isOver ? 'gray' : 'white'
       }}
     >
       {items.map((item, index) => (
